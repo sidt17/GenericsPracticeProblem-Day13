@@ -6,9 +6,9 @@ namespace Generics
         public static void Main(string[] args)
         { 
             Checkmax value = new Checkmax();
-            value.Maxnumber();
-           
-           
+            int d = value.Maxnumber(8, 5, 3);
+            Console.WriteLine(d + "is the largest number");
+
         }
     }
 }
