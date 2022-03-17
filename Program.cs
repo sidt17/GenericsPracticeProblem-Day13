@@ -6,8 +6,8 @@ namespace Generics
         public static void Main(string[] args)
         {
             Checkmax value = new Checkmax();
-            string d = value.Maxnumber("Peach", "Apple", "Banana");
-            Console.WriteLine("The max string at first position is " + d);
+            string d = value.Maxnumber( "Apple", "Peach", "Banana");
+            Console.WriteLine("The max string at second position is " + d);
         }
     }
 }
