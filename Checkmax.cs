@@ -8,34 +8,37 @@ namespace Generics
 {
     public class Checkmax
     {
-        public int Maxnumber(int a, int b, int c)
+        public void Maxnumber()
         {
-            
+            float a = 5.64f;
+            float b = 5.43f;
+            float c = 4.74f;
             if (a.CompareTo(b) == 1 && a.CompareTo(c) == 1)      //comparing values to each other by using compareTo keyword
             {
-                return a;
+                Console.WriteLine("a is largest number that is " + a);
             }
-            if (b.CompareTo(a) ==1 && b.CompareTo(c) == 1)
+            if (b.CompareTo(a) == 1 && b.CompareTo(c) == 1)
             {
-                return b;
+                Console.WriteLine("b is largest number that is " + b);
             }
             if (c.CompareTo(a) == 1 && c.CompareTo(b) == 1)
             {
-                return c;
+                Console.WriteLine("c is largest number that is " + c);
             }
 
-            return default;
+           
 
         }
 
 
     }
-          
-
-    
 
 
-         
-    
-    
+
+
+
+
+
+
+
 }
