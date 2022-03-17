@@ -8,22 +8,26 @@ namespace Generics
 {
     public class Checkmax
     {
-        public float Maxnumber(float a, float b, float c)
+        public void Maxnumber()
         {
-            
-            if (a.CompareTo(b) == 1 && a.CompareTo(c) == 1)      //comparing values to each other by using compareTo keyword
+            string a = "Apple";
+            string b = "Peach";
+            string c = "Banana";
+
+
+            if (a.CompareTo(b) ==1 && a.CompareTo(c) == 1)
             {
-                return a;
+                Console.WriteLine("The max is " + a);
             }
             if (b.CompareTo(a) == 1 && b.CompareTo(c) == 1)
             {
-                return b;
+                Console.WriteLine("The max is " + b);
             }
             if (c.CompareTo(a) == 1 && c.CompareTo(b) == 1)
             {
-                return c;
+                Console.WriteLine("The max is " + c);
             }
-            return default;
+           
            
 
         }
