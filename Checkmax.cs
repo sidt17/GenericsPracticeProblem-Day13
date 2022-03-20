@@ -6,21 +6,31 @@ namespace Generics
 {
     class MaxCount<T>
     {
-        public T[] ValuesInArray;
 
-        public MaxCount(params T[] ValuesInArray)
+        public T[] Values;
+
+        public MaxCount(params T[] Values)
         {
-            this.ValuesInArray = ValuesInArray;
+            this.Values = Values;
         }
 
-        public void MaxValue()
+        public T[] SortValues(T[] Values)
         {
-            Array.Sort(this.ValuesInArray);
-
-            Console.WriteLine("max value:" + this.ValuesInArray[ValuesInArray.Length - 1]);
+            Array.Sort(Values);
+            return Values;
         }
+
+        public T TestMaximum(T[] values)
+        {
+            var maxValue = SortValues(Values);
+            return maxValue[maxValue.Length - 1];
+        }
+        public void PrintMax()
+        {
+            Console.WriteLine("max int value is :" + TestMaximum(Values));
+            Console.WriteLine("max float value is :" + TestMaximum(Values));
+            Console.WriteLine("max string value is :" + TestMaximum(Values));
+        }
+
     }
 }
-
-
-
