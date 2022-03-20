@@ -6,40 +6,24 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Checkmax
+    internal class FindMax
     {
-        public string Maxnumber(string a,string b,string c)
-        { 
-            
-
-
-            if (a.CompareTo(b) ==1 && a.CompareTo(c) == 1)
+        public T MaxValue<T>(T Value1, T Value2, T Value3)
+        {
+            if (Comparer<T>.Default.Compare(Value1, Value2) > 0 && Comparer<T>.Default.Compare(Value1, Value2) > 0)
             {
-                return a;
+                return Value1;
             }
-            if (b.CompareTo(a) == 1 && b.CompareTo(c) == 1)
+            else if (Comparer<T>.Default.Compare(Value2, Value1) > 0 && Comparer<T>.Default.Compare(Value2, Value3) > 0)
             {
-                return b;
+                return Value2;
             }
-            if (c.CompareTo(a) == 1 && c.CompareTo(b) == 1)
+            else
             {
-                return c;
+                return Value3;
             }
-
-            return default;
-           
-
         }
 
 
     }
-
-
-
-
-
-
-
-
-
 }
